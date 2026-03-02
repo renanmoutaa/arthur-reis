@@ -1,0 +1,19 @@
+W:TESTE 
+F:TESTE 
+S:TESTE 
+***
+Tipo                                              112 1000 0 0
+N§Chamada                                         115 1000 0 0
+Ind.Resp.                                         120 1000 0 1
+T¡tulo/Subt¡tulo                                  125 1000 0 0
+Artigo                                            130 1000 0 1
+Peri¢dico                                         135 1000 0 0
+N§Ed.                                             140 1000 0 0
+Publica‡Æo                                        150 1000 0 0
+P./ V./ N§/ IL                                    155 1000 0 0
+S‚rie                                             160 1000 0 0
+Nota                                              165 1000 0 1
+Resumo                                            170 1000 0 1
+Descritores                                       175 1000 0 1
+N§ reg.                                           180 1000 0 1
+Tombo                                             190 1000 0 1

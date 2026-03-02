@@ -1,0 +1,18 @@
+fonts((nil,Arial),(nil,Verdana),(nil,Comic Sans MS))
+{cl10,box,'\isispatt bg0012 \qr ',f1,b,cl18,
+'Winisis 1.4 - Hypertext Pictures Example'##
+{cl8,fs24,i,'Of course, pictures names may be stored in fields and displayed
+ using a format.'},/{f0,qc,cl14,'It is possible to draw simple maps. For example:'}###
+}
+'\sbknone ',link(('\chpict unmap11 '),'TEXTBOX[1] UNESCO MAP - Top of the map'),/
+'\sbknone ',link(('\chpict unmap21 '),'TEXTBOX[1] UNESCO MAP - Publications'),
+link(('\chpict unmap22 '),'TEXTBOX[1] UNESCO MAP - Current Events'),
+link(('\chpict unmap23 '),'TEXTBOX[1] UNESCO MAP - Programmes'),/
+'\sbknone ',link(('\chpict unmap31 '),'TEXTBOX[1] UNESCO MAP - Documents'),
+link(('\chpict unmap32 '),'TEXTBOX[1] UNESCO MAP - About U.N.E.S.C.O.'),
+link(('\chpict unmap33 '),'TEXTBOX[1] UNESCO MAP - Statistics'),/
+'\sbknone ',link(('\chpict unmap41 '),'TEXTBOX[1] UNESCO MAP - Information Services'),
+link(('\chpict unmap42 '),'TEXTBOX[1] UNESCO MAP - nothing...'),
+link(('\chpict unmap43 '),'TEXTBOX[1] UNESCO MAP - Legal Instruments'),/
+#{'\htcolor10 ',b,cl15,f0,qc,'Choose format 'link(('PICT3'),'FORMAT pict3')' to see more...'}
+

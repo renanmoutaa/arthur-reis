@@ -1,0 +1,15 @@
+fonts((nil,Arial),(nil,Verdana),(nil,Comic Sans MS))
+'{\title This is the CDS Database and you can change this title}'
+{cl10,box,'\isispatt bg0012 \qr ',f1,b,cl18,
+'Winisis 1.4 - Hypertext Pictures Example'#
+}
+
+fs28,f1,cl8,{b,fs36,cl9,'C'},'lick on the images below to get the ',{b,fs36,cl14,'F'},'ull ',{b,fs36,cl15,'P'},'icture:'/#
+
+link(('\chpict unescox '),'TEXTBOX[2]IMG unescob'),'  ',
+link(('\chpict dc17842x '),'TEXTBOX[2]IMG dc17842'),'  ',
+link(('\chpict dc17844x '),'TEXTBOX[2]IMG dc17844'),'  ',
+##
+{fs24,i,'Of course, pictures names may be stored in fields and displayed
+ using a format.'},/#
+{'\htcolor10 ',b,cl15,f0,qc,'Choose format 'link(('PICT2'),'FORMAT pict2')' to see more...'}

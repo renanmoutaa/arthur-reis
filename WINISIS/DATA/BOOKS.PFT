@@ -1,0 +1,19 @@
+fonts((modern,Courier New),(roman,Times New Roman),(swiss,Arial)),
+cols((0,0,0)),
+cl10,f1,box(1)'MFN: 'mfn(4),tab(2794),{cl10,fs32,b'OBRAS DE AUTORIA DE ARTHUR REIS. BOOKS.MST'}/#f2,cl4,m(2794,-2794),cl4,fs30,
+if p(v112) then {cl1,fs24,i,b'TIPO:'},tab(2794),v112/fi/
+if p(v115) then {cl1,fs24,i,b'Nß CHAMADA:'},tab(2794),v115/fi/
+(if p(v120) then if occ=1 then {cl1,fs24,i,b'IND. RESP.:'} fi,tab(2794),v120/fi/),
+(if p(v122) then if occ=1 then {cl1,fs24,i,b'PREF./TRAD./ILUST.:'} fi,tab(2794),v122/fi/),
+if p(v125) then {cl1,fs24,i,b'T÷T./SUBT÷TULO:'},tab(2794),v125/fi/
+if p(v130) then {cl1,fs24,i,b'ARTIGO:'},tab(2794),v130/fi/
+if p(v135) then {cl1,fs24,i,b'PERI‡DICO:'},tab(2794),v135/fi/
+if p(v140) then {cl1,fs24,i,b'Nß ED.:'},tab(2794),v140/fi/
+if p(v150) then {cl1,fs24,i,b'PUBLICAÄ«O:'},tab(2794),v150/fi/
+if p(v155) then {cl1,fs24,i,b'P./ V./ Nß/ IL:'},tab(2794),v155/fi/
+if p(v160) then {cl1,fs24,i,b'SêRIE:'},tab(2794),v160/fi/
+(if p(v165) then if occ=1 then {cl1,fs24,i,b'NOTAS GERAIS:'} fi,tab(2794),v165/fi/),
+(if p(v170) then if occ=1 then {cl1,fs24,i,b'RESUMO:'} fi,tab(2794),v170/fi/),
+(if p(v175) then if occ=1 then {cl1,fs24,i,b'DESCRITORES:'} fi,tab(2794),v175/fi/),
+(if p(v180) then if occ=1 then {cl1,fs24,i,b'Nß REG.:'} fi,tab(2794),v180/fi/),
+(if p(v190) then if occ=1 then {cl1,fs24,i,b'TOMBO PATRIMONIAL:'} fi,tab(2794),v190/fi/),

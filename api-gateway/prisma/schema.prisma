@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://admin:adminpassword@localhost:5433/bibliotecadb?schema=public"
+}
+
+model Book {
+  id                 String   @id @default(uuid())
+  registrationNumber String?
+  title              String
+  authors            String?
+  publisher          String?
+  year               String?
+  isbn               String?
+  summary            String?
+  location           String?
+  coverImage         String?
+  subject            String?
+  mfn                Int?     @unique // Tracking the WINISIS original reference
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}

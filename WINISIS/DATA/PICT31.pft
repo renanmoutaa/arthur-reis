@@ -1,0 +1,5 @@
+'\picscaled2 \isisbgbmp bg0025 ',
+##
+{cl4,f1,fs32,'This window is a ',{fs46,cl1,b,'TEXTBOX'},':'/##
+{tab(2300),i,cl5,fs36,'another view on your database'}/
+}

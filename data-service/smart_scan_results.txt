@@ -1,0 +1,5 @@
+Starting smart scan...
+SUCCESS: format=isis, packed=True, lockable=True, shift=0, endianness=little
+SUCCESS: format=isis, packed=True, lockable=True, shift=3, endianness=little
+SUCCESS: format=isis, packed=True, lockable=True, shift=6, endianness=little
+Finished scan.

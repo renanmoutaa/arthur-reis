@@ -1,0 +1,17 @@
+fonts((nil,Arial),(nil,Verdana))
+{cl10,box,'\isispatt bg0012 \qr ',f1,b,cl18,
+'Winisis 1.4 - Hypertext Pictures Example'}##
+{cl8,fs24,'Now, when you pass over a zone, it reacts and... changes'},/#
+{fs32,f0,qc,cl14,'Click on each zone!!! ',cl15,fs24,'(especially in the middle...)'}##
+
+'\sbknone ',link(('\chpict1 unmap11 unmap11n '),'TEXTBOX[1] UNESCO MAP - Top of the map'),/
+'\sbknone ',link(('\chpict1 unmap21 unmap21n '),'TEXTBOX[1] UNESCO MAP - Publications'),
+link(('\chpict1 unmap22 unmap22n '),'TEXTBOX[1] UNESCO MAP - Current Events'),
+link(('\chpict1 unmap23 unmap23n '),'TEXTBOX[1] UNESCO MAP - Programmes'),/
+'\sbknone ',link(('\chpict1 unmap31 unmap31n '),'TEXTBOX[1] UNESCO MAP - Documents'),
+link(('\chpict1 unmap32 unmap32n '),'TEXTBOX[3]LOAD pict31'),
+link(('\chpict1 unmap33 unmap33n '),'TEXTBOX[1] UNESCO MAP - Statistics'),/
+'\sbknone ',link(('\chpict1 unmap41 unmap41n '),'TEXTBOX[1] UNESCO MAP - Information Services'),
+link(('\chpict1 unmap42 unmap42n '),'TEXTBOX[1] UNESCO MAP - nothing...'),
+link(('\chpict1 unmap43 unmap43n '),'TEXTBOX[1] UNESCO MAP - Legal Instruments'),/
+

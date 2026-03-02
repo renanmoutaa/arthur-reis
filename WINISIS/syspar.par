@@ -1,0 +1,24 @@
+; Isis for Windows - Configuration File
+
+1=c:\winisis\prog\
+2=C:\winisis\menu\
+3=C:\winisis\msg\
+4=C:\winisis\work\
+5=c:\winisis\data\
+8=%
+; Default language
+
+; Activate Helpbar
+121=1
+141=C:\winisis\bg\
+142=10,1
+980=1
+130=1
+101=BR
+112=Microsoft XPS Document Writer,winspool,XPSPort:
+122=0, -4, -4, 1027, 563
+1001=C:\USERS\CINTIA\DESKTOP\WINISIS\DATA\perio.mst
+1002=C:\USERS\CINTIA\DESKTOP\WINISIS\DATA\books.mst
+1003=c:\users\cintia\desktop\winisis\data\books.mst
+1004=C:\USERS\CINTIA\DESKTOP\WINISIS\DATA\arthur.mst
+1005=c:\users\cintia\desktop\winisis\data\arthur.mst

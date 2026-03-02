@@ -1,0 +1,26 @@
+fonts((nil,Arial),(nil,Verdana))
+bpict(('pat007'),('winisis1.jpg'),24) 
+{cl15,fs30,qc,'Winisis 1.4 Color pre-defined color table'}
+{,##b,
+cl10,'  color 0 - (black)',tab(3500),
+cl1,'  color 1 - dark red'/
+cl2,'  color 2 - dark green',tab(3500),
+cl3,'  color 3 - brown'/
+cl4,'  color 4 - dark blue',tab(3500),
+cl5,'  color 5 - dark violet'/
+cl6,'  color 6 - soft blue',tab(3500),
+cl7,'  color 7 - light gray'/
+cl8,'  color 8 - soft green',tab(3500),
+cl9,'  color 9 - soft blue'/
+cl10,'  color 10 - white',tab(3500),
+cl11,'  color 11 - gray'/
+cl12,'  color 12 - dark gray',tab(3500),
+cl13,'  color 13 - red'/
+cl14,'  color 14 - green',tab(3500),
+cl15,'  color 15 - yellow'/
+cl16,'  color 16 - blue',tab(3500),
+cl17,'  color 17 - violet'/
+cl18,'  color 18 - light blue',tab(3500),
+cl19,'  color 19 - white'/}
+
+##

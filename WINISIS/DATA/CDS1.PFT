@@ -1,0 +1,5 @@
+'MFN        : ',MFN(4)/MDL,"CONFERENCE : "V12(0,13)/"TITLE      : "V24(0,13)/"AU
+THOR(S)  : "V70(0,14)+|; |/"EDITION    : "V25(0,13)/"IMPRINT    : "V26(0,13)/"CO
+LLATION  : "V30(0,13)/"SERIES     : "V44(0,13)/"NOTES      : "V50(0,13)/"CORP. B
+ODY : "D71,(V71(13,13)/)/"ADDED CONF : "D72,(V72(13,13)/)/"OTHER TITLE: "D74,(V7
+4(13,13)/)/"OTHER LANG : "D76,(V76^*(13,13)/)/"KEYWORDS   : "V69(0,13)/##

@@ -1,0 +1,32 @@
+fonts((nil,Arial),(nil,Verdana))
+{cl10,bpict(('pat007'),('bg0018.jpg'),0), qr ,f1,b,cl18,
+'\htcolor7 ',link((pict('bt00001.jpg','bt00001s.jpg')),'OPENFILE http://www.unesco.org/webworld/isis')}##
+,cl10,
+#m(3000),{cl15,
+{fs28,b,'Easier access to multimedia content'}#
+tab,'ú Web links, e-mails, ...'##,
+cl7,
+{fs28,b,'New Data Entry control options'}#
+tab,'ú Pick lists (also by plug-ins)'#
+tab,'ú Begin and End edit automatic modifications'#,
+tab,'ú Improved record validation'##,
+cl10,
+{fs28,b,'New Import/Export Options'}#
+tab,'ú ISO 2709 options added'#
+tab,'ú XML Export facility (through formats)'##
+cl14,
+{fs28,b,'New Dictionary capabilities'}#
+tab,'ú Prefix management'#
+tab,'ú Dumping options'##
+cl9,
+{fs28,b,'Guided search window redesigned'}#
+tab,'ú Easier access to dictionary'##
+cl18,
+{fs28,b,'Many new commands'}#
+tab,'ú BMP and JPG capability'##
+cl13,
+{fs28,b,'Plug-in ready'}#
+tab,'ú Accepts external 32-bits plug-ins'#
+
+
+

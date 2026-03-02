@@ -1,0 +1,41 @@
+mpu,v1,/mpl, ("   SN  ",v2(5,5)/) (|   USE |v3/) (|   UF  |v4/) ( 
+if p(v5) 
+   then |   BT  |d5,link((v5),'LGOTO ',v5)/,ref(l(v5), ( 
+       if p(v5) 
+          then |      BT2 |d5,link((v5),'LGOTO ',v5)/,ref(l(v5), ( 
+              if p(v5) 
+                 then |         BT3 |d5,link((v5),'LGOTO ',v5)/,ref(l(v5), ( 
+                     if p(v5) 
+                        then |            BT4 |d5,link((v5),'LGOTO ',v5)/,ref(l(V5), ( 
+                            if p(v5) 
+                               then |               BT5 |d5,link((v5),'LGOTO ',v5)/ 
+                            fi 
+                            )) 
+                     fi 
+                     )) 
+              fi 
+              )) 
+       fi 
+       )) 
+fi 
+) ( 
+if p(v6) 
+   then |   NT  |d6,link((v6),'LGOTO ',v6)/,ref(l(v6), ( 
+       if p(v6) 
+          then |      NT2 |d6,link((v6),'LGOTO ',v6)/,ref(l(v6), ( 
+              if p(v6) 
+                 then |         NT3 |d6,link((v6),'LGOTO ',v6)/,ref(l(v6), ( 
+                     if p(v6) 
+                        then |            NT4 |d6,link((v6),'LGOTO ',v6)/,ref(l(V6), ( 
+                            if p(v6) 
+                               then |               NT5 |d6,link((v6),'LGOTO ',v6)/ 
+                            fi 
+                            )) 
+                     fi 
+                     )) 
+              fi 
+              )) 
+       fi 
+       )) 
+fi 
+) (|RT  |v7/) #
