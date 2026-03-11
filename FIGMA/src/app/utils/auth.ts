@@ -10,7 +10,7 @@ export interface User {
 
 const CURRENT_USER_KEY = 'biblioteca_current_user';
 const TOKEN_KEY = 'biblioteca_token';
-const API_URL = 'http://localhost:3000';
+const API_URL = `http://${window.location.hostname}:3000`;
 
 export const authUtils = {
   // Inicializa com usuários padrão chamando a API caso não existam no banco
