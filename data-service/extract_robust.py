@@ -3,7 +3,10 @@ import os
 import json
 import sys
 
-WINISIS_DIR = r"d:\bibiotecav2\WINISIS\DATA"
+# Use a relative path from the script location to find the WINISIS data
+# This allows it to work on both Windows and Linux if the folder structure is preserved
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+WINISIS_DIR = os.path.join(BASE_DIR, "WINISIS", "DATA")
 
 def robust_extract(db_name):
     mst_path = os.path.join(WINISIS_DIR, f"{db_name}.MST")
