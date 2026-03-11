@@ -3,7 +3,7 @@ import { AppModule } from './app.module';
 
 import { json, urlencoded } from 'express';
 
-process.env.DATABASE_URL = "postgresql://admin:adminpassword@localhost:5433/bibliotecadb?schema=public";
+process.env.DATABASE_URL = "postgresql://admin:adminpassword@localhost:5435/bibliotecadb?schema=public";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

@@ -1,4 +1,5 @@
-import { Controller, Get, Param, Post, Body, Put, Delete, Query } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, Put, Delete, Query, UseGuards } from '@nestjs/common';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { BooksService } from './books.service';
 import { Book as BookModel } from '@prisma/client';
 
@@ -15,7 +16,7 @@ export class BooksController {
     ): Promise<{ data: BookModel[]; total: number }> {
         return this.booksService.books({
             skip: skip ? Number(skip) : 0,
-            take: take ? Number(take) : 50, // default page limit 50
+            take: take ? Number(take) : 100000, // retrieve all for frontend search
             where: searchString
                 ? {
                     OR: [
@@ -36,11 +37,13 @@ export class BooksController {
         return this.booksService.book({ id });
     }
 
+    @UseGuards(JwtAuthGuard)
     @Post()
     async createBook(@Body() bookData: any): Promise<BookModel> {
         return this.booksService.createBook(bookData);
     }
 
+    @UseGuards(JwtAuthGuard)
     @Put(':id')
     async updateBook(
         @Param('id') id: string,
@@ -52,6 +55,7 @@ export class BooksController {
         });
     }
 
+    @UseGuards(JwtAuthGuard)
     @Delete(':id')
     async deleteBook(@Param('id') id: string): Promise<BookModel> {
         return this.booksService.deleteBook({ id });

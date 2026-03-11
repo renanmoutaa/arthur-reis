@@ -29,7 +29,7 @@ export function Login() {
     init();
   }, [navigate]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
@@ -38,11 +38,15 @@ export function Login() {
       return;
     }
 
-    const success = authUtils.login(username, password);
-    if (success) {
-      navigate('/');
-    } else {
-      setError('Usuário ou senha inválidos');
+    try {
+      const success = await authUtils.login(username, password);
+      if (success) {
+        navigate('/');
+      } else {
+        setError('Usuário ou senha inválidos');
+      }
+    } catch (err) {
+      setError('Erro ao conectar com o servidor');
     }
   };
 
@@ -92,18 +96,7 @@ export function Login() {
               />
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4 text-sm space-y-3">
-              <div>
-                <p className="font-semibold text-blue-900 mb-2">👨‍💼 Administrador:</p>
-                <p className="text-blue-800">Usuário: <strong>admin</strong> | Senha: <strong>admin123</strong></p>
-                <p className="text-xs text-blue-600 mt-1">Acesso total: adicionar, editar e excluir livros</p>
-              </div>
-              <div className="border-t border-blue-200 pt-2">
-                <p className="font-semibold text-blue-900 mb-2">👁️ Visitante:</p>
-                <p className="text-blue-800">Usuário: <strong>viewer</strong> | Senha: <strong>viewer123</strong></p>
-                <p className="text-xs text-blue-600 mt-1">Acesso somente leitura: visualizar livros</p>
-              </div>
-            </div>
+
           </CardContent>
 
           <CardFooter>

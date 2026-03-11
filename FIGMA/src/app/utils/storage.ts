@@ -17,6 +17,15 @@ export interface Book {
 }
 
 const API_URL = 'http://localhost:3000';
+import { authUtils } from './auth';
+
+const getAuthHeaders = () => {
+  const token = authUtils.getToken();
+  return {
+    "Content-Type": "application/json",
+    ...(token ? { "Authorization": `Bearer ${token}` } : {})
+  };
+};
 
 export const storageUtils = {
   // Inicializa com livros mock
@@ -25,7 +34,7 @@ export const storageUtils = {
   },
 
   // Obtém todos os livros
-  getBooks: async (skip = 0, take = 50, searchString?: string, orderBy?: string): Promise<Book[]> => {
+  getBooks: async (skip = 0, take = 100000, searchString?: string, orderBy?: string): Promise<Book[]> => {
     const params = new URLSearchParams();
     if (skip) params.append('skip', skip.toString());
     if (take) params.append('take', take.toString());
@@ -48,7 +57,7 @@ export const storageUtils = {
   addBook: async (book: Partial<Book>): Promise<Book> => {
     const res = await fetch(`${API_URL}/books`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: getAuthHeaders(),
       body: JSON.stringify(book)
     });
     return await res.json();
@@ -58,7 +67,7 @@ export const storageUtils = {
   updateBook: async (id: string, updates: Partial<Book>): Promise<Book | null> => {
     const res = await fetch(`${API_URL}/books/${id}`, {
       method: "PUT",
-      headers: { "Content-Type": "application/json" },
+      headers: getAuthHeaders(),
       body: JSON.stringify(updates)
     });
     if (!res.ok) throw new Error('Falha ao atualizar livro');
@@ -67,13 +76,16 @@ export const storageUtils = {
 
   // Remove um livro
   deleteBook: async (id: string): Promise<boolean> => {
-    const res = await fetch(`${API_URL}/books/${id}`, { method: "DELETE" });
+    const res = await fetch(`${API_URL}/books/${id}`, {
+      method: "DELETE",
+      headers: getAuthHeaders()
+    });
     return res.ok;
   },
 
   // Busca livros
   searchBooks: async (query: string): Promise<Book[]> => {
-    return storageUtils.getBooks(0, 50, query);
+    return storageUtils.getBooks(0, 100000, query);
   },
 
   // Converte e redimensiona imagem para base64 (Máximo 400x600)

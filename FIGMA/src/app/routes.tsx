@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
   {
     path: '/add-book',
     element: (
-      <ProtectedRoute>
+      <ProtectedRoute adminOnly>
         <AddBook />
       </ProtectedRoute>
     ),
@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
   {
     path: '/edit-book/:id',
     element: (
-      <ProtectedRoute>
+      <ProtectedRoute adminOnly>
         <AddBook />
       </ProtectedRoute>
     ),

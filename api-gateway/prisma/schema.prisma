@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://admin:adminpassword@localhost:5433/bibliotecadb?schema=public"
+  url      = "postgresql://admin:adminpassword@localhost:5435/bibliotecadb?schema=public"
 }
 
 model Book {
@@ -15,11 +15,27 @@ model Book {
   publisher          String?
   year               String?
   isbn               String?
-  summary            String?
-  location           String?
-  coverImage         String?
   subject            String?
-  mfn                Int?     @unique // Tracking the WINISIS original reference
+  mfn                Int?
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
+  coverImage         String?
+  location           String?
+  summary            String?
+  winisisId          String?  @unique
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  username  String   @unique
+  password  String
+  role      Role     @default(VIEWER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  VIEWER
 }

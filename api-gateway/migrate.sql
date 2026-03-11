@@ -1,0 +1,4 @@
+ALTER TABLE "Book" DROP CONSTRAINT IF EXISTS "Book_mfn_key";
+DROP INDEX IF EXISTS "Book_mfn_key";
+ALTER TABLE "Book" ADD COLUMN IF NOT EXISTS "winisisId" TEXT UNIQUE;
+UPDATE "Book" SET "winisisId" = 'ARTHUR-' || CAST(mfn AS TEXT) || '-0' WHERE "winisisId" IS NULL AND mfn IS NOT NULL;

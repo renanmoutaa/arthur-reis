@@ -32,6 +32,7 @@ export function Dashboard() {
   const [sortBy, setSortBy] = useState('recent');
   const [bookToDelete, setBookToDelete] = useState<string | null>(null);
   const [nextRegistrationNumber, setNextRegistrationNumber] = useState<string>('');
+  const [displayLimit, setDisplayLimit] = useState(50);
   const isAdmin = authUtils.isAdmin();
 
   useEffect(() => {
@@ -40,6 +41,7 @@ export function Dashboard() {
 
   useEffect(() => {
     filterAndSortBooks();
+    setDisplayLimit(50); // Reset display limit on filter/sort change
   }, [books, searchQuery, sortBy]);
 
   const loadBooks = async () => {
@@ -202,15 +204,27 @@ export function Dashboard() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredBooks.map((book, index) => (
-              <BookCard
-                key={book.id}
-                book={book}
-                onDelete={isAdmin ? handleDelete : undefined}
-                index={index}
-              />
-            ))}
+          <div className="flex flex-col items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+              {filteredBooks.slice(0, displayLimit).map((book, index) => (
+                <BookCard
+                  key={book.id}
+                  book={book}
+                  onDelete={isAdmin ? handleDelete : undefined}
+                  index={index}
+                />
+              ))}
+            </div>
+
+            {displayLimit < filteredBooks.length && (
+              <Button
+                variant="outline"
+                className="mt-8 px-8 py-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-black transition-colors"
+                onClick={() => setDisplayLimit(prev => prev + 50)}
+              >
+                Carregar Mais Livros
+              </Button>
+            )}
           </div>
         )}
       </main>
