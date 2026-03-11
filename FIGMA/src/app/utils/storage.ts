@@ -16,7 +16,7 @@ export interface Book {
   mfn?: number;
 }
 
-const API_URL = 'http://localhost:3000';
+const API_URL = `http://${window.location.hostname}:3000`;
 import { authUtils } from './auth';
 
 const getAuthHeaders = () => {
